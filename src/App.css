@@ -1,0 +1,90 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom right, #e0f7fa, #80deea);
+  min-height: 100vh;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif; /* Set a modern font */
+}
+
+.App-header {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-field {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border 0.3s;
+}
+
+.input-field:focus {
+  border-color: #009688;
+  outline: none;
+}
+
+.file-list {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.file-name {
+  font-weight: bold;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-download {
+  background: #009688;
+  color: white;
+}
+
+.btn-remove {
+  background: #e57373;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.no-files {
+  color: #999;
+  text-align: center;
+}
