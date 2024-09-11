@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect, useContext, useState, useRef } from 'react';
+import React, { useReducer, useEffect, useState, useRef } from 'react';
 import './App.css';
 import { parseBuffer } from 'music-metadata-browser';
 import JSZip from 'jszip';
