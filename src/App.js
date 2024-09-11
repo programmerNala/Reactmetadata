@@ -1,12 +1,10 @@
-import React, { useReducer, useEffect, createContext, useContext, useState, useRef } from 'react';
+import React, { useReducer, useEffect, useContext, useState, useRef } from 'react';
 import './App.css';
 import { parseBuffer } from 'music-metadata-browser';
 import JSZip from 'jszip';
 import { PDFDocument } from 'pdf-lib';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-
-const FileContext = createContext();
 
 const config = {
   defaultMetadata: {
@@ -224,6 +222,7 @@ function useFileHandler() {
     setTheme,
   };
 
+  // eslint-disable-next-line
   function AudioPlayer({ file }) {
     return (
       <audio controls>
@@ -242,14 +241,13 @@ function App() {
     handleFileUpload,
     removeFile,
     clearFiles,
-    setTheme,
   } = useFileHandler();
 
   const quillRef = useRef(null);
 
   const downloadFile = async (file) => {
     try {
-      const { processedFile, licenseBlob } = await attachMetadataToDownload(file.file, metadata);
+      const { processedFile } = await attachMetadataToDownload(file.file, metadata);
 
       const zip = new JSZip();
       zip.file(file.name, processedFile);
